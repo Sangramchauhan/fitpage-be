@@ -26,8 +26,13 @@ app.use(
 const port = 8000;
 
 // api routes
-app.use('/api', dataRoute);
+app.use('/data', dataRoute);
 
+app.use("/", (req, res) => {
+  res.json({
+    data: "Server is Running"
+  })
+})
 // started listening 
 app.listen(port, () => {
     console.log('SERVER STARTED');

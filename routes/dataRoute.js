@@ -3,7 +3,7 @@ const router = express.Router();
 const { dataController } = require("../controllers/dataController");
 
 // api route to get data
-router.get('/data', dataController);
+router.get('/', dataController);
 
 // exported router
 module.exports = router;
